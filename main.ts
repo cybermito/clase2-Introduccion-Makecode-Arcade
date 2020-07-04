@@ -138,4 +138,26 @@ let Player1 = sprites.create(img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `, SpriteKind.Player)
+let Other = sprites.create(img`
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 f f f f f f f f f f f f f f 4 
+4 4 1 1 1 1 1 4 4 1 1 1 1 1 4 4 
+4 4 1 f f f 1 4 4 f f f 1 1 4 4 
+4 4 1 f f f 1 4 4 f f f 1 1 4 4 
+4 4 1 f f f 1 4 4 f f f 1 1 4 4 
+4 4 1 1 1 1 1 4 4 1 1 1 1 1 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 3 4 4 4 4 4 4 4 4 4 4 3 4 4 
+4 4 4 3 4 4 4 4 4 4 4 4 3 4 4 4 
+4 4 4 4 3 3 3 3 3 3 3 3 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+`, SpriteKind.Enemy)
+Other.setPosition(152, 8)
+Other.follow(Player1, 50)
+Player1.setPosition(152, 60)
+Player1.setVelocity(-20, 0)
 controller.moveSprite(Player1)
